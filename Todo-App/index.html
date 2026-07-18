@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>My Todo List</h1>
+            <p class="subtitle">Stay organized and productive</p>
+        </header>
+
+        <main>
+            <!-- Input Section -->
+            <div class="input-section">
+                <input 
+                    type="text" 
+                    id="taskInput" 
+                    class="task-input" 
+                    placeholder="Add a new task..."
+                    aria-label="Enter a new task"
+                >
+                <button id="addBtn" class="add-btn" aria-label="Add task">
+                    <span class="btn-text">Add</span>
+                </button>
+            </div>
+
+            <!-- Task Counter -->
+            <div class="task-counter">
+                <span id="taskCount">0</span> tasks
+                <span class="separator">•</span>
+                <span id="completedCount">0</span> completed
+            </div>
+
+            <!-- Task List Section -->
+            <section class="tasks-section">
+                <ul id="taskList" class="task-list" aria-label="Task list">
+                    <!-- Tasks will be dynamically added here -->
+                </ul>
+
+                <!-- Empty State Message -->
+                <div id="emptyState" class="empty-state">
+                    <div class="empty-icon">📝</div>
+                    <p>No tasks yet. Add one to get started!</p>
+                </div>
+            </section>
+
+            <!-- Clear Completed Button -->
+            <button id="clearCompletedBtn" class="clear-btn" style="display: none;" aria-label="Clear completed tasks">
+                Clear Completed
+            </button>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Todo List App. Simple and effective task management.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
